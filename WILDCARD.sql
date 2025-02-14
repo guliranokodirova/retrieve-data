@@ -75,7 +75,7 @@ where name between 'A' and 'L'
 where name not between 'A' and 'M'
 
 ---From the following table, write a SQL query to find the details of those salespeople whose names begin with 
----‘N’ and the fourth character is 'l'. Rests may be any character. Return salesman_id, name, city, commission. 
+---â€˜Nâ€™ and the fourth character is 'l'. Rests may be any character. Return salesman_id, name, city, commission. 
 
 11)select * from [W3Resource].[Inventory].[Salesman]
 where name like 'N__l%'
@@ -95,6 +95,29 @@ where name like 'N__l%'
   ---ord_no, purch_amt, ord_date, customer_id, and salesman_id. 
   select * from [W3Resource].[Inventory].[Orders]
   where purch_amt between 500 and 4000 AND purch_amt not in (948.50, 1983.43)
+
+	
+---- 12  dan 19 gacha table create qlomadim
+
+
+  ----20From the following table, write a SQL query to find all those customers who does not have any grade. Return customer_id, cust_name, city, grade, salesman_id.
+
+  select * from [W3Resource].[Inventory].[Customer]
+  where grade is null 
+
+  ------21From the following table, write a SQL query to locate all customers with a grade value. Return customer_id, cust_name,city, grade, salesman_id.
+
+  
+  select * from [W3Resource].[Inventory].[Customer]
+  where grade is not null
+
+
+
+  -----22.From the following table, write a  SQL query to locate the employees whose last name
+  ---begins with the letter 'D'. Return emp_idno, emp_fname, emp_lname and emp_dept. 
+
+  select * from [W3Resource].[dbo].[emp_details]
+  where emp_lname like 'D%'
 
 
 
